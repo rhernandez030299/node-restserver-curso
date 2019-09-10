@@ -10,6 +10,8 @@ app.post('/login', function(req, res) {
 
     let body = req.body;
 
+    console.log(body);
+
     Usuario.findOne({ email: body.email }, (err, usuarioDB) => {
 
         if (err) {
